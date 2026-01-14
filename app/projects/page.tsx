@@ -177,7 +177,7 @@ export default function About() {
                   <Badge>NextJS</Badge>
                   <Badge>React</Badge>
                   <Badge>TypeScript</Badge>
-                  <Badge>Shadecn</Badge>
+                  <Badge>Shadcn</Badge>
                   <Badge>Tailwind</Badge>
                 </div>
               </CardFooter>
