@@ -162,7 +162,12 @@ export default function About() {
               <CardHeader>
                 <CardTitle>website</CardTitle>
                 <CardAction>
-                  <Link href="/projects/cloud-lab-infra">View Project</Link>
+                  <Link
+                    href="https://github.com/ividrine/website"
+                    target="_blank"
+                  >
+                    View Project
+                  </Link>
                 </CardAction>
               </CardHeader>
               <CardContent>
