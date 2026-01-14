@@ -13,7 +13,14 @@ export default function Blog() {
     <div className="flex items-center justify-center">
       <main className="w-full max-w-3xl py-12 px-12">
         <h1 className="text-center">Blog</h1>
-        <ul className="text-center list-disc list-inside">{postsContent}</ul>
+
+        {posts.length === 0 && (
+          <p className="text-center">No blog posts have been published yet.</p>
+        )}
+
+        {posts.length > 0 && (
+          <ul className="text-center list-disc list-inside">{postsContent}</ul>
+        )}
       </main>
     </div>
   );

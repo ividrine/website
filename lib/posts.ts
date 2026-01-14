@@ -61,6 +61,11 @@ function rehypeExtractToc(toc: TocItem[]) {
 
 export const getPostData = async (id: string) => {
   const fullPath = path.join(postDir, `${id}.md`);
+
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 

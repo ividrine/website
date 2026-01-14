@@ -1,9 +1,15 @@
 import { getPostData } from "@/lib/posts";
 import { TableOfContents } from "@/components/ui/table-of-contents";
+import { notFound } from "next/navigation";
 
 const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const data = await getPostData(slug);
+
+  if (!data) {
+    return notFound();
+  }
+
   return (
     <div className="flex justify-center">
       <main className="w-full max-w-3xl py-12 px-12">
