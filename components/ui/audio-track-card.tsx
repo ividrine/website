@@ -51,7 +51,7 @@ export function AudioTrackCard({
 
   return (
     <div
-      className="group relative w-full cursor-pointer rounded-md p-4 transition-colors transition-opacity duration-300 hover:bg-accent/20"
+      className="group relative w-full cursor-pointer rounded-md p-4 transition-colors transition-opacity duration-300 hover:bg-muted/50"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
