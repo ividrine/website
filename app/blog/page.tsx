@@ -15,7 +15,7 @@ export default function Blog() {
         <h1 className="text-center">Blog</h1>
 
         {posts.length === 0 && (
-          <p className="text-center">No blog posts have been published yet.</p>
+          <p className="text-center">No blog posts yet :/</p>
         )}
 
         {posts.length > 0 && (

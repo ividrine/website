@@ -17,15 +17,17 @@ export default function About() {
         <div>
           <h1 className="text-center">About</h1>
           <p className="indent-6">
-            I am a dad, software engineer, tinkerer and lifelong learner. I am
-            passionate about computer science and information technology. I love
-            solving hard problems with computers and software.
+            I am a dad, software engineer, tinkerer and lifelong learner. I love
+            solving hard problems, being creative and building cool new things.
+            I am driven by deep curiosity and passion for computer science and
+            information technology. I&apos;m a fan of skateboarding, video games
+            and good music.
           </p>
         </div>
 
         <div className="mb-12 mt-8">
           <h2 className="text-center">Work</h2>
-          <div className="flex flex-col gap-4 mt-2">
+          <div className="flex flex-col gap-4 mt-6">
             <Card>
               <CardHeader>
                 <CardTitle>Magnetic</CardTitle>
@@ -119,7 +121,7 @@ export default function About() {
 
         <div>
           <h2 className="text-center">Education</h2>
-          <div>
+          <div className="mt-6">
             <Card>
               <CardHeader>
                 <CardTitle>West Virginia University at Parkersburg</CardTitle>

@@ -15,11 +15,10 @@ export default function About() {
       <main className="w-full max-w-3xl justify-between py-12 px-12">
         <h1 className="text-center">Projects</h1>
         <p className="indent-6">
-          Two things that I enjoy are learning and building new awesome things.
           Over the past few years I have explored IaC and various IT operations,
           SRE practices, dev/gitops workflows, boilerplate web services, and
-          game development. Here are some of the projects that I have built
-          along the way.
+          even game development. Here are some of the projects I have built and
+          continue to maintain.
         </p>
         <div className="flex flex-col gap-4 mt-4 items-stretch mt-8">
           <div>
