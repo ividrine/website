@@ -18,7 +18,7 @@ export function Footer() {
           </div>
           <div className="text-right">
             <Link href="/webring" className="text-right">
-              Web Ring
+              Webring
             </Link>
           </div>
         </div>
