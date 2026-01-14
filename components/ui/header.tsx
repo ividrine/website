@@ -11,13 +11,26 @@ import {
 
 import { Icon } from "@/components/ui/icon";
 import { Separator } from "@/components/ui/separator";
+import { useEffect, useState } from "react";
 
 export function Header() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const scrollHandler = () => setScrolled(window.scrollY > 0);
+    document.addEventListener("scroll", scrollHandler);
+    return () => document.removeEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
     <div className="sticky top-0 z-50">
-      <header className="flex w-full justify-center bg-transparent pt-0 sm:pt-2">
-        <NavigationMenu className="flex p-1 rounded-full bg-background border border-border shadow-md gap-2">
+      <header
+        className={`flex w-full justify-center bg-transparent pt-0 transition-all ${
+          scrolled ? "pt-0" : "sm:pt-4"
+        }`}
+      >
+        <NavigationMenu className="flex p-2 sm:rounded-full bg-background border-b sm:border border-border shadow-md gap-2">
           <NavigationMenuItem className="list-none">
             <NavigationMenuLink
               asChild
