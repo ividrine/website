@@ -151,8 +151,8 @@ export default function About() {
                 <div className="flex flex-wrap gap-2">
                   <Badge>express-starter-app</Badge>
                   <Badge>WebSocket</Badge>
-                  <Badge>Redis Pub/Sub</Badge>
-                  <Badge>AWS Gamelift</Badge>
+                  <Badge>Redis</Badge>
+                  <Badge>AWS</Badge>
                 </div>
               </CardFooter>
             </Card>
