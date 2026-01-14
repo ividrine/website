@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "content.isaacvidrine.com",
-        pathname: "/content/**",
+        pathname: "/**",
       },
     ],
   },
