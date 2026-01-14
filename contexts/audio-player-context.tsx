@@ -140,16 +140,25 @@ export function AudioPlayerProvider({
       }
     };
 
+    const playPause = (e: KeyboardEvent) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        togglePlayPause();
+      }
+    };
+
     audio.addEventListener("timeupdate", updateTime);
     audio.addEventListener("loadedmetadata", updateDuration);
     audio.addEventListener("ended", handleEnded);
+    window.addEventListener("keydown", playPause);
 
     return () => {
       audio.removeEventListener("timeupdate", updateTime);
       audio.removeEventListener("loadedmetadata", updateDuration);
       audio.removeEventListener("ended", handleEnded);
+      window.removeEventListener("keydown", playPause);
     };
-  }, [isRepeat, playNext]);
+  }, [isRepeat, playNext, togglePlayPause]);
 
   const seek = useCallback((time: number) => {
     if (audioRef.current) {
