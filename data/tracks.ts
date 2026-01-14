@@ -8,7 +8,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/wav/nuclear.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/relentless.wav`,
   },
   {
     id: "2",
@@ -16,7 +16,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/wav/discoverer.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/discoverer.wav`,
   },
   {
     id: "3",
@@ -24,7 +24,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/wav/abstraction.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/abstraction.wav`,
   },
   {
     id: "4",
@@ -32,7 +32,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/mp3/dark.mp3`,
+    audioSrc: `${config.content_url}/audio/untitled/silent-struggle.mp3`,
   },
   {
     id: "5",
@@ -40,7 +40,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/wav/weird.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/weird.wav`,
   },
   // Tunnel Vision EP
   {
@@ -49,7 +49,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/luminous.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/luminous.mp3`,
   },
   {
     id: "7",
@@ -57,7 +57,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/arthas.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/arthas.mp3`,
   },
   {
     id: "8",
@@ -65,7 +65,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/blue-fire.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/blue-fire.mp3`,
   },
   {
     id: "9",
@@ -73,7 +73,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/voorhees.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/voorhees.mp3`,
   },
   {
     id: "10",
@@ -81,7 +81,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/decaying.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/decaying.mp3`,
   },
   {
     id: "11",
@@ -89,7 +89,7 @@ export const tracks = [
     album: "Tunnel Vision",
     year: "2017",
     image: `${config.content_url}/img/tunnel-vision.jpg`,
-    audioSrc: `${config.content_url}/mp3/alien-opera.mp3`,
+    audioSrc: `${config.content_url}/audio/tunnel-vision/alien-opera.mp3`,
   },
   // Singles
   {
@@ -98,6 +98,6 @@ export const tracks = [
     album: "Single",
     year: "2015",
     image: `${config.content_url}/img/war-of-stars.jpg`,
-    audioSrc: `${config.content_url}/mp3/war-of-stars.mp3`,
+    audioSrc: `${config.content_url}/audio/singles/war-of-stars.mp3`,
   },
 ];
