@@ -124,7 +124,6 @@ export function AudioPlayerProvider({
     playTrack(playlist[previousIndex]);
   }, [currentTrack, playlist, playTrack]);
 
-  // Set up audio event listeners
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -203,7 +202,6 @@ export function AudioPlayerProvider({
       }}
     >
       {children}
-      {/* Global audio element - key ensures it persists across route changes */}
       <audio ref={audioRef} />
     </AudioPlayerContext.Provider>
   );
