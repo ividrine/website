@@ -1,0 +1,103 @@
+import config from "@/config";
+
+export const tracks = [
+  // Untitled EP
+  {
+    id: "1",
+    title: "Relentless",
+    album: "Untitled",
+    year: "2018",
+    image: `${config.content_url}/img/untitled.jpg`,
+    audioSrc: `${config.content_url}/wav/nuclear.wav`,
+  },
+  {
+    id: "2",
+    title: "Discoverer",
+    album: "Untitled",
+    year: "2018",
+    image: `${config.content_url}/img/untitled.jpg`,
+    audioSrc: `${config.content_url}/wav/discoverer.wav`,
+  },
+  {
+    id: "3",
+    title: "Abstraction",
+    album: "Untitled",
+    year: "2018",
+    image: `${config.content_url}/img/untitled.jpg`,
+    audioSrc: `${config.content_url}/wav/abstraction.wav`,
+  },
+  {
+    id: "4",
+    title: "Silent Struggle",
+    album: "Untitled",
+    year: "2018",
+    image: `${config.content_url}/img/untitled.jpg`,
+    audioSrc: `${config.content_url}/mp3/dark.mp3`,
+  },
+  {
+    id: "5",
+    title: "Weird",
+    album: "Untitled",
+    year: "2018",
+    image: `${config.content_url}/img/untitled.jpg`,
+    audioSrc: `${config.content_url}/wav/weird.wav`,
+  },
+  // Tunnel Vision EP
+  {
+    id: "6",
+    title: "Luminous",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/luminous.mp3`,
+  },
+  {
+    id: "7",
+    title: "Arthas",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/arthas.mp3`,
+  },
+  {
+    id: "8",
+    title: "Blue Fire",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/blue-fire.mp3`,
+  },
+  {
+    id: "9",
+    title: "Voorhees",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/voorhees.mp3`,
+  },
+  {
+    id: "10",
+    title: "Decaying",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/decaying.mp3`,
+  },
+  {
+    id: "11",
+    title: "Alien Opera",
+    album: "Tunnel Vision",
+    year: "2017",
+    image: `${config.content_url}/img/tunnel-vision.jpg`,
+    audioSrc: `${config.content_url}/mp3/alien-opera.mp3`,
+  },
+  // Singles
+  {
+    id: "12",
+    title: "War of Stars",
+    album: "Single",
+    year: "2015",
+    image: `${config.content_url}/img/war-of-stars.jpg`,
+    audioSrc: `${config.content_url}/mp3/war-of-stars.mp3`,
+  },
+];
