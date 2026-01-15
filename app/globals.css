@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 @import "prismjs/themes/prism-tomorrow.css";
 
 @theme inline {
@@ -101,33 +100,6 @@
 
   a:not(header a, aside a, h1 a, h2 a, h3 a, h4 a) {
     @apply underline underline-offset-4;
-  }
-
-  .blog-post ul {
-    @apply list-disc ml-6 my-4;
-  }
-
-  .blog-post pre {
-    @apply rounded-sm;
-  }
-
-  .blog-post code {
-    @apply font-semibold p-1 rounded-xs bg-muted;
-  }
-
-  /* Code block scrollbar styling */
-  pre[class*="language-"]::-webkit-scrollbar {
-    @apply h-[8px];
-  }
-
-  pre[class*="language-"]::-webkit-scrollbar-track {
-  }
-
-  pre[class*="language-"]::-webkit-scrollbar-thumb {
-    @apply rounded-sm;
-  }
-
-  pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
   }
 }
 
