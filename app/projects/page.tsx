@@ -23,7 +23,7 @@ export default function Projects() {
           Over the past few years I have explored IaC and various IT operations,
           SRE practices, dev/gitops workflows, boilerplate web services, and
           even game development. Here are some of the projects I have built and
-          continue to maintain.
+          maintain.
         </p>
         <div className="flex flex-col gap-4 mt-4 items-stretch mt-8">
           <div>
@@ -78,9 +78,9 @@ export default function Projects() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Production ready Node/Express5 starter application for
-                  building RESTful APIs. Complete with all the boilerplate
-                  features you would expect and full observability using{" "}
+                  Node/Express5 starter application for building RESTful APIs.
+                  Complete with all the boilerplate features you would expect
+                  and full observability using{" "}
                   <Link href="https://opentelemetry.io/" target="_blank">
                     OpenTelemetry
                   </Link>
@@ -89,10 +89,10 @@ export default function Projects() {
               </CardContent>
               <CardFooter>
                 <div className="flex flex-wrap gap-2">
+                  <Badge>TypeScript</Badge>
                   <Badge>Node</Badge>
                   <Badge>Express 5</Badge>
                   <Badge>PostgreSQL</Badge>
-                  <Badge>TypeScript</Badge>
                   <Badge>Docker</Badge>
                   <Badge>OpenTelemetry</Badge>
                 </div>
@@ -123,9 +123,9 @@ export default function Projects() {
               </CardContent>
               <CardFooter>
                 <div className="flex flex-wrap gap-2">
-                  <Badge>Unreal Engine</Badge>
                   <Badge>C++</Badge>
-                  <Badge>UMG</Badge>
+                  <Badge>Unreal Engine</Badge>
+                  <Badge>Amazon GameLift</Badge>
                 </div>
               </CardFooter>
             </Card>
@@ -156,7 +156,8 @@ export default function Projects() {
                   <Badge>express-starter-app</Badge>
                   <Badge>WebSocket</Badge>
                   <Badge>Redis</Badge>
-                  <Badge>AWS</Badge>
+                  <Badge>Amazon SNS</Badge>
+                  <Badge>Amazon GameLift</Badge>
                 </div>
               </CardFooter>
             </Card>
@@ -183,11 +184,11 @@ export default function Projects() {
               </CardContent>
               <CardFooter>
                 <div className="flex flex-wrap gap-2">
-                  <Badge>NextJS</Badge>
-                  <Badge>React</Badge>
                   <Badge>TypeScript</Badge>
-                  <Badge>Shadcn</Badge>
+                  <Badge>React</Badge>
+                  <Badge>NextJS</Badge>
                   <Badge>Tailwind</Badge>
+                  <Badge>Shadcn</Badge>
                 </div>
               </CardFooter>
             </Card>
