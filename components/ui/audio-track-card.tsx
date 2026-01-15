@@ -84,7 +84,7 @@ export function AudioTrackCard({
       {/* Track Info */}
 
       <div>
-        <p className="text-lg font-medium text-foreground mb-0">{title}</p>
+        <p className="text-base font-medium text-foreground mb-0">{title}</p>
         <p className="text-sm text-muted-foreground mb-0">
           {album} ({year})
         </p>
