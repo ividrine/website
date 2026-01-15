@@ -8,8 +8,13 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import type { Metadata } from "next";
 
-export default function About() {
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
+export default function Projects() {
   return (
     <div className="flex items-center justify-center">
       <main className="w-full max-w-3xl justify-between py-12 px-12">

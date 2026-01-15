@@ -17,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isaac Vidrine",
-  description: "Dad, Software Engineer, Tinkerer, Lifelong Learner.",
+  title: {
+    template: "%s | Isaac Vidrine",
+    default: "Isaac Vidrine",
+  },
+  description: "Dad, Software Engineer, Tinkerer, Lifelong Learner",
 };
 
 export default function RootLayout({

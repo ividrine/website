@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function WebRing() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Webring",
+};
+
+export default function Webring() {
   return (
     <main className="w-full mx-auto max-w-3xl py-12 px-12">
       <h1 className="text-center">Webring</h1>

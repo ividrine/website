@@ -9,6 +9,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/dist/client/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function About() {
   return (
