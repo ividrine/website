@@ -18,6 +18,10 @@ import type { Element, Root } from "hast";
 const postDir = path.join(process.cwd(), "data/posts");
 
 export const getPosts = (): Post[] => {
+  if (!fs.existsSync(postDir)) {
+    return [];
+  }
+
   return fs
     .readdirSync(postDir)
     .map((fileName) => {
