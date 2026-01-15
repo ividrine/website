@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-2">
           <div>
             <p className="text-left">
-              © {new Date().getFullYear()} Isaac Vidrine.
+              © {new Date().getFullYear()} Isaac Vidrine
             </p>
           </div>
           <div className="text-right">
