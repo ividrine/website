@@ -11,8 +11,8 @@ export default function Webring() {
     <main className="w-full mx-auto max-w-3xl py-12 px-12">
       <h1 className="text-center">Webring</h1>
       <p className="indent-6">
-        I have added this site to a Webring that my friends and colleagues
-        started. You can check out their websites here:
+        I have added this site to a Webring that some friends started. You can
+        check out their sites below:
       </p>
       <ul className="list-disc list-inside">
         <li>
