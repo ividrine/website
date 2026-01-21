@@ -8,7 +8,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/audio/untitled/relentless.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/relentless.mp3`,
   },
   {
     id: "2",
@@ -16,7 +16,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/audio/untitled/discoverer.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/discoverer.mp3`,
   },
   {
     id: "3",
@@ -24,7 +24,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/audio/untitled/abstraction.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/abstraction.mp3`,
   },
   {
     id: "4",
@@ -40,7 +40,7 @@ export const tracks = [
     album: "Untitled",
     year: "2018",
     image: `${config.content_url}/img/untitled.jpg`,
-    audioSrc: `${config.content_url}/audio/untitled/weird.wav`,
+    audioSrc: `${config.content_url}/audio/untitled/weird.mp3`,
   },
   // Tunnel Vision EP
   {
