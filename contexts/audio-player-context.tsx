@@ -19,6 +19,9 @@ export interface Track {
 }
 
 interface AudioPlayerContextType {
+  isBuffering: boolean;
+  bufferedAmount: number;
+  error: string | null;
   currentTrack: Track | null;
   playlist: Track[];
   isPlaying: boolean;
@@ -40,7 +43,7 @@ interface AudioPlayerContextType {
 }
 
 const AudioPlayerContext = createContext<AudioPlayerContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function AudioPlayerProvider({
@@ -48,6 +51,9 @@ export function AudioPlayerProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const [isBuffering, setIsBuffering] = useState(false);
+  const [bufferedAmount, setBufferedAmount] = useState(0);
+  const [error, setError] = useState<string | null>(null);
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
   const [playlist, setPlaylist] = useState<Track[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -69,6 +75,7 @@ export function AudioPlayerProvider({
   const playTrack = useCallback((track: Track) => {
     setCurrentTrack(track);
     setIsPlaying(true);
+    setBufferedAmount(0);
     if (audioRef.current) {
       audioRef.current.src = track.audioSrc;
       audioRef.current.play();
@@ -130,6 +137,12 @@ export function AudioPlayerProvider({
 
     const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
+    const updateBuffered = () => {
+      if (audio.buffered.length > 0 && audio.duration > 0) {
+        const bufferedEnd = audio.buffered.end(audio.buffered.length - 1);
+        setBufferedAmount((bufferedEnd / audio.duration) * 100);
+      }
+    };
     const handleEnded = () => {
       if (isRepeat) {
         audio.currentTime = 0;
@@ -146,15 +159,36 @@ export function AudioPlayerProvider({
       }
     };
 
+    const handleError = (e: ErrorEvent) => {
+      const audioEl = e.target as HTMLAudioElement;
+      setError(`Failed to load: ${audioEl.error?.message || "Unknown error"}`);
+    };
+
+    const handleStalled = () => {
+      console.warn("Audio stalled - network issues");
+    };
+
     audio.addEventListener("timeupdate", updateTime);
     audio.addEventListener("loadedmetadata", updateDuration);
+    audio.addEventListener("progress", updateBuffered);
     audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("waiting", () => setIsBuffering(true));
+    audio.addEventListener("canplay", () => setIsBuffering(false));
+    audio.addEventListener("playing", () => setIsBuffering(false));
+    audio.addEventListener("error", handleError);
+    audio.addEventListener("stalled", handleStalled);
     window.addEventListener("keydown", playPause);
 
     return () => {
       audio.removeEventListener("timeupdate", updateTime);
       audio.removeEventListener("loadedmetadata", updateDuration);
+      audio.removeEventListener("progress", updateBuffered);
       audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("waiting", () => setIsBuffering(true));
+      audio.removeEventListener("canplay", () => setIsBuffering(false));
+      audio.removeEventListener("playing", () => setIsBuffering(false));
+      audio.removeEventListener("error", handleError);
+      audio.removeEventListener("stalled", handleStalled);
       window.removeEventListener("keydown", playPause);
     };
   }, [isRepeat, playNext, togglePlayPause]);
@@ -181,6 +215,9 @@ export function AudioPlayerProvider({
   return (
     <AudioPlayerContext.Provider
       value={{
+        isBuffering,
+        bufferedAmount,
+        error,
         currentTrack,
         playlist,
         isPlaying,
@@ -202,7 +239,7 @@ export function AudioPlayerProvider({
       }}
     >
       {children}
-      <audio ref={audioRef} />
+      <audio ref={audioRef} preload="metadata" />
     </AudioPlayerContext.Provider>
   );
 }
@@ -211,7 +248,7 @@ export function useAudioPlayer() {
   const context = useContext(AudioPlayerContext);
   if (context === undefined) {
     throw new Error(
-      "useAudioPlayer must be used within an AudioPlayerProvider"
+      "useAudioPlayer must be used within an AudioPlayerProvider",
     );
   }
   return context;

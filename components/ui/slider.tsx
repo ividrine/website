@@ -5,14 +5,19 @@ import * as SliderPrimitive from "@radix-ui/react-slider";
 
 import { cn } from "@/lib/utils";
 
+interface SliderProps extends React.ComponentProps<typeof SliderPrimitive.Root> {
+  bufferedPercent?: number;
+}
+
 function Slider({
   className,
   defaultValue,
   value,
   min = 0,
   max = 100,
+  bufferedPercent,
   ...props
-}: React.ComponentProps<typeof SliderPrimitive.Root>) {
+}: SliderProps) {
   const _values = React.useMemo(
     () =>
       Array.isArray(value)
@@ -42,6 +47,13 @@ function Slider({
           "bg-accent relative grow overflow-hidden rounded-full data-[orientation=horizontal]:h-1 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1"
         )}
       >
+        {bufferedPercent !== undefined && (
+          <div
+            data-slot="slider-buffer"
+            className="absolute h-full bg-muted-foreground/30 rounded-full"
+            style={{ width: `${bufferedPercent}%` }}
+          />
+        )}
         <SliderPrimitive.Range
           data-slot="slider-range"
           className={cn(

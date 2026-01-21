@@ -3,6 +3,7 @@
 import { useAudioPlayer } from "@/contexts/audio-player-context";
 import { Icon, IconName } from "@/components/ui/icon";
 import { Slider } from "@/components/ui/slider";
+import { Spinner } from "@/components/ui/spinner";
 import Image from "next/image";
 import {
   Tooltip,
@@ -26,6 +27,8 @@ export function NowPlayingBar() {
   const {
     currentTrack,
     isPlaying,
+    isBuffering,
+    bufferedAmount,
     currentTime,
     duration,
     volume,
@@ -122,16 +125,19 @@ export function NowPlayingBar() {
                 <TooltipTrigger asChild>
                   <button
                     onClick={togglePlayPause}
-                    aria-label={isPlaying ? "Pause" : "Play"}
+                    aria-label={isBuffering ? "Loading" : isPlaying ? "Pause" : "Play"}
+                    disabled={isBuffering}
                   >
-                    {isPlaying ? (
+                    {isBuffering ? (
+                      <Spinner className="size-8" />
+                    ) : isPlaying ? (
                       <Icon name="pause" size={32} />
                     ) : (
                       <Icon name="play" size={32} />
                     )}
                   </button>
                 </TooltipTrigger>
-                <TooltipContent>{isPlaying ? "Pause" : "Play"}</TooltipContent>
+                <TooltipContent>{isBuffering ? "Loading" : isPlaying ? "Pause" : "Play"}</TooltipContent>
               </Tooltip>
 
               {/* Next */}
@@ -181,6 +187,7 @@ export function NowPlayingBar() {
                 max={duration || 100}
                 step={0.1}
                 onValueChange={handleProgressChange}
+                bufferedPercent={bufferedAmount}
                 className="flex-1"
               />
               <span className="min-w-[40px] text-right text-xs text-muted-foreground">
