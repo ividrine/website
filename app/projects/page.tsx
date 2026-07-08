@@ -21,9 +21,8 @@ export default function Projects() {
         <h1 className="text-center">Projects</h1>
         <p className="indent-6">
           Over the past few years I have explored IaC and various IT operations,
-          SRE practices, dev/gitops workflows, boilerplate web services, and
-          even game development. Here are some of the projects I have built and
-          maintain.
+          SRE practices, dev/gitops workflows and boilerplate web services. Here
+          are some of the projects I have built and maintain.
         </p>
         <div className="flex flex-col gap-4 mt-4 items-stretch mt-8">
           <div>
@@ -95,69 +94,6 @@ export default function Projects() {
                   <Badge>PostgreSQL</Badge>
                   <Badge>Docker</Badge>
                   <Badge>OpenTelemetry</Badge>
-                </div>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div>
-            <Card>
-              <CardHeader>
-                <CardTitle>Tactics Revived</CardTitle>
-                <CardAction>
-                  <Link
-                    href="https://github.com/ividrine/TacticsRevived"
-                    target="_blank"
-                  >
-                    View Project
-                  </Link>
-                </CardAction>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Live service, turn based strategy game built using Unreal
-                  Engine 5 C++/Blueprints. Inspired by{" "}
-                  <em>Tactics Arena: Online</em>, a web based flash game from
-                  the early 2000s.
-                </p>
-              </CardContent>
-              <CardFooter>
-                <div className="flex flex-wrap gap-2">
-                  <Badge>C++</Badge>
-                  <Badge>Unreal Engine</Badge>
-                  <Badge>Amazon GameLift</Badge>
-                </div>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div>
-            <Card>
-              <CardHeader>
-                <CardTitle>Tactics Revived API</CardTitle>
-                <CardAction>
-                  <Link
-                    href="https://github.com/ividrine/tactics-api"
-                    target="_blank"
-                  >
-                    View Project
-                  </Link>
-                </CardAction>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Web API layer for Tactics Revived. Bootstrapped with
-                  express-starter-app, this includes player authentication, chat
-                  system, and 1v1 matchmaking.
-                </p>
-              </CardContent>
-              <CardFooter>
-                <div className="flex flex-wrap gap-2">
-                  <Badge>express-starter-app</Badge>
-                  <Badge>WebSocket</Badge>
-                  <Badge>Redis</Badge>
-                  <Badge>Amazon SNS</Badge>
-                  <Badge>Amazon GameLift</Badge>
                 </div>
               </CardFooter>
             </Card>
