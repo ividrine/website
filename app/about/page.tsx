@@ -105,7 +105,7 @@ export default function About() {
                   <Link href="https://www.piratemx.com/" target="_blank">
                     Piratemx.com
                   </Link>{" "}
-                  / E-commerce, Multi-Channel Sales and Inventory.
+                  / E-commerce, Multi-Channel Sales and Inventory
                 </span>
               </CardContent>
               <CardFooter>
